@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Gravitas+One&family=Permanent+Marker&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="images/ファビコン.png">
+</head>
+
+<body>
+  <header>
+    <nav class="topnav">
+      <ul class="menubar">
+        <li><a href="index.html">🌈HOME</a></li>
+        <li><a href="profile.html">👸🏼PROFILE</a></li>
+        <li><a href="works.html">👩🏼‍💻WORKS</a></li>
+        <li><a href="contact.html">💌CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="profpage">
+    <div class="spin-card">
+      <img src="images/プロフィールカード.jpg" data-alt="images/マイクとしおん.png" >
+    </div>
+    <div class="profpagememo">
+      <img src="images/しおんのプロフィール帳.jpg">
+    </div>
+  </div>
+  <h2 class="clickonthecard">CLICK ON THE CARD👆🏼💫</h2>
+
+  <div class="lifep">
+    <p>👚FAVORITE COORDINATE🩰</p>
+  </div>
+
+  <div class="liferowcard">
+  <!-- 1枚目のカード -->
+  <div class="rowcard">
+    <div class="inner">
+      <div class="lifefront"><img src="images/2頭身しおん.jpg"></div>
+      <div class="lifeback"><img src="images/2頭身しおん裏.jpg"></div>
+    </div>
+  </div>
+
+  <!-- 2枚目 -->
+  <div class="rowcard">
+    <div class="inner">
+      <div class="lifefront"><img src="images/キュアブロッサム.jpg"></div>
+      <div class="lifeback"><img src="images/キュアブロッサム裏.jpg"></div>
+    </div>
+  </div>
+
+  <!-- 3枚目 -->
+  <div class="rowcard">
+    <div class="inner">
+      <div class="lifefront"><img src="images/夏ディズニーの服.jpg"></div>
+      <div class="lifeback"><img src="images/夏ディズニーの服裏.jpg"></div>
+    </div>
+  </div>
+
+  <!-- 4枚目 -->
+  <div class="rowcard">
+    <div class="inner">
+      <div class="lifefront"><img src="images/冬ディズニーの服.jpg"></div>
+      <div class="lifeback"><img src="images/冬ディズニーの服裏.jpg"></div>
+    </div>
+  </div>
+
+  <!-- 5枚目 -->
+  <div class="rowcard">
+    <div class="inner">
+      <div class="lifefront"><img src="images/音楽の日の服.jpg"></div>
+      <div class="lifeback"><img src="images/音楽の日の服裏.jpg"></div>
+    </div>
+  </div>
+</div>
+  
+<div class="life">
+  <div class="life-text left">
+    <p>⭐2007年2月6日生まれ👶🏼🍼<br>
+    <p>➡️プリキュアが好きでよく踊っていた<br>
+    <p>⭐9歳ぷっちぐみでイラストが採用🐼<br>
+    <p>➡️絵を描いて家族が喜んでくれた<br>ことが嬉しかった💗💗💗
+    <p>⭐2019年13歳ガチのオタク人生スタート<br>
+    <p>➡️LDHの沼にハマったsince2016🌐<br>
+    <p>始まりはE-girls(中学部活はバドミントン)</p>
+    </p>
+  </div>
+
+  <div class="life-visual">
+  <div class="lifescreen">
+    <video src="images/0107 .mp4"
+           autoplay loop muted playsinline
+           class="lifescreen-content"></video>
+  </div>
+
+  <div class="profilemachine">
+    <img src="images/ゲーム機②完成.png">
+  </div>
+</div>
+
+  <div class="life-text right">
+    <p>⭐15歳高校生になる🙋🏻‍♀️<br>
+    <p>➡️チアリーディング部に入部する＆<br>
+    <p>D.LEAGUEに出会いオタク人生加速🔥<br>
+    <p>⭐18歳高校を卒業して専門入学🌸<br>
+    <p>➡️なお、高校生料金は終了🥹<br>
+    <p>⭐19歳10代最終章🔥<br>
+    <p>➡️全力で駆け抜ける🤸🏼‍♀️🌟➰</p>
+    </p>
+  </div>
+</div>
+
+
+  <script>
+    document.querySelectorAll('.spin-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const img = card.querySelector('img');
+
+    card.classList.add('spin');
+
+    // 回転の途中で画像を切り替える
+    setTimeout(() => {
+      const current = img.src;
+      img.src = img.dataset.alt;
+      img.dataset.alt = current;
+    }, 500); // 半回転くらいのタイミング
+
+    // アニメーション終了後にクラス外す
+    setTimeout(() => {
+      card.classList.remove('spin');
+    }, 1000);
+  });
+});
+  </script>
+
+
+
+</body>
+</html>

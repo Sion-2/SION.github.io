@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Gravitas+One&family=Permanent+Marker&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="images/ファビコン.png">
+  </head>
+
+<body class="contactbody">
+  <header>
+    <nav class="topnav">
+      <ul class="menubar">
+        <li><a href="index.html">🌈HOME</a></li>
+        <li><a href="profile.html">👸🏼PROFILE</a></li>
+        <li><a href="works.html">👩🏼‍💻WORKS</a></li>
+        <li><a href="contact.html">💌CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <form action="#">
+    <p><label for="name">お名前（必須）</label><br>
+      <input type="text" name="name" id="name" required>
+    </p>
+
+    <p><label for="mailaddress">メールアドレス（必須）</label><br>
+      <input type="email" name="mailaddress" id="mailaddress" required>
+    </p>
+
+    <p><label for="pref">このポートフォリオサイトは星いくつ？</label><br>
+      <select name="pref" id="pref">
+        <option value="2">☆☆☆</option>
+        <option value="3">★☆☆</option>
+        <option value="4">★★☆</option>
+        <option value="5">★★★</option>
+      </select>
+    </p>
+
+    <p><label for="freespace">メッセージ</label><br>
+      <textarea name="freespace" id="freespace"></textarea>
+    </p>
+    <p>
+      <button class="game-btn">▶ CONFIRM</button>
+    </p>
+  </form>
+
+</body>
+
+</html>
