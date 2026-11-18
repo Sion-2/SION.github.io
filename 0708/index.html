@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24:15</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bangers&family=Gravitas+One&family=Lobster&family=M+PLUS+1p&family=Permanent+Marker&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+<div class="container">
+
+  <div class="status">
+    <span id="shop-status"></span>
+  </div>
+  <div class="time">
+      <p>営業時間 : 24:15 - 翌2:00</p>
+  </div>
+
+    <div class="toptext">
+      <div class="titletext">移動式夜パフェ専門店</div>
+      <div class="time">24:15</div>
+    </div>
+    <div class="message">
+      <p>24:15 — 今日を頑張った自分への、小さなご褒美。<br>
+        真夜中にだけ現れる、移動式の夜パフェ専門店。<br></p>
+    </div>
+
+
+
+
+
+<div class="strawberry">
+  <h1>いちごとピスタチオの夜更かしパフェ</h1>
+    <img src="images/ichigopafe2.png" class="simg">
+
+    <div class="text">
+        <p>
+            甘酸っぱい苺と<br>
+            濃厚なピスタチオ。<br>
+            一日の終わりにふさわしい
+            贅沢な味わい。<br>
+            <span>1500円</span>
+        </p>
+    </div>
+</div>
+
+<div class="ichijiku">
+  <h1>月夜のイチジクとキャラメル</h1>
+    <img src="images/ichijikupafe.png" class="iimg">
+
+    <div class="text">
+        <p>
+            キャラメルのほろ苦さ<br>
+            が、大人の夜を<br>
+            演出します。<br>
+            <span>1500円</span>
+        </p>
+    </div>
+</div>
+
+<div class="sakura">
+  <h1>桜舞う、春の夜の夢</h1>
+    <img src="images/sakurapafe.png" class="simg">
+
+    <div class="text">
+        <p>
+            季節限定。<br>
+            ふんわりと桜が香る、<br>
+            軽やかな口どけ。<br>
+            <span>1500円</span>
+        </p>
+    </div>
+</div>
+
+
+<div class="message">
+      <p>夜中にふと甘いものが食べたくなった時。<br>
+        コンビニじゃなくて、少しだけ特別なものが欲しい。<br>
+        そんなあなたの夜に寄り添いたくて、<br>
+        キッチンカーを走らせています。</p>
+    </div>
+
+     <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1868.7795496455851!2d139.77046764215626!3d35.70840917915918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c21c92451d1%3A0xe63e2022c25b91a7!2z5rmv5bO26aeF!5e0!3m2!1sja!2sjp!4v1781670696563!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="maptext">
+      <P>・東京都文京区湯島駅周辺<br>
+      (キッチンカーでの移動販売のため、<br>公式Instagramにて場所の情報を更新しています。)</P>
+      <p>公式Instagram↓</p>
+    </div>
+    <div class="sns">
+      <a href="#"><p><span class=account>@_2415kitchencar_</span></p></a>
+    </div>
+
+    <div class="tel">
+    <p>お問い合わせはこちらの電話番号にお願いします。↓</p>
+    <a href="#"><p>☎03-1234-5678</p></a>
+    </div>
+
+    <div class="foot">
+      <img src="images/resusita.png">
+    </div>
+
+    <script>
+    const now = new Date();
+
+    const hour = now.getHours();
+
+    // 21:00～翌2:00
+    const isOpen = hour >= 21 || hour < 2;
+
+    const status = document.getElementById("shop-status");
+
+    if(isOpen){
+      status.textContent = "OPEN";
+      status.classList.add("open");
+    }else{
+      status.textContent = "CLOSE";
+      status.classList.add("closed");
+    }
+    </script>
+</div>
+
+</body>
+</html>

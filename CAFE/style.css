@@ -1,0 +1,449 @@
+body {
+  margin: 0;
+  font-family: "Philosopher", sans-serif;
+  overflow-x: hidden;
+}
+a:link,
+a:visited {
+  color: inherit;   /* 親要素の色を使う */
+  text-decoration: none; /* 下線も消す場合 */
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.5);
+  top: 0;
+}
+
+.title img {
+  width: 250px;
+  margin: 0 20px;
+}
+
+.topnav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px; /* ← ここを小さくする */
+}
+
+.menubar {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  font-size: 25px;
+  color: black;
+
+}
+
+.menubar li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menubar li:hover {
+  color: #d2691e;
+}
+
+/* ===== スライドショー ===== */
+.slideshow {
+  margin-top: 0;
+  position: relative;
+  height: 630px;
+  overflow: hidden;
+}
+
+.slides {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4;}
+  to {opacity: 1;}
+}
+
+h3{
+  text-align: center;
+  font-size: 50px;
+  margin-top: 80px;
+}
+.ptext{
+  font-size: 15px;
+}
+.shop img{
+  height: auto;
+  width: 700px;
+}
+.menu img{
+  display: block;
+  height: auto;
+  width: 520px;
+  transform: translateX(30px);
+}
+.menu{
+  display: flex;
+  align-items: center;       
+  justify-content: center;  
+  gap: 40px;                 
+  margin: 60px auto;         
+  max-width: 1200px;         
+  text-align: left;          
+}
+
+.shop{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 30px;               
+  margin: 60px auto;
+  max-width: 1200px;       
+  padding: 0 40px;         
+}
+
+.shop.text {
+  max-width: 380px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+.menu.text{
+  max-width: 380px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  padding-left: 50px;
+}
+.shop .text h2 ,.menu .text h2{
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/*TOPICS*/
+.topicsh3{
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.topics {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.topicslist {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* カードの間隔 */
+}
+
+.topicslist li {
+  width: calc(25% - 15px); /* 4列にする */
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.topicslist li:hover {
+  transform: translateY(-5px);
+}
+
+.topicsimg img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.topicstext {
+  padding: 16px;
+}
+
+.day {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.area {
+  background: #ccc;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+.topicstext h4 {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #222;
+}
+
+.topicstext p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+.topicstext a {
+  display: block;
+  text-align: right;
+}
+
+
+.sns ul {
+  display: flex;        
+  list-style: none;      
+  padding: 0;            
+  margin-top: 80px; 
+  margin-bottom: 80px;
+  justify-content: center;
+  gap: 50px;             
+}
+
+.sns li img {
+  width: 100px;           
+  height: auto;
+}
+
+.small{
+  text-align: center;
+  color: white;
+  background-color: #4f380c;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/*MENU PAGE*/
+h5{
+  text-align: center;
+  font-size: 50px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.menubtn{
+  color: white;
+}
+.menubtn ul{
+  display: flex;
+  margin-top: 120px;
+  justify-content: center;
+  gap: 20px;
+}
+.menubtn li:hover {
+  transform: translateY(-5px);
+}
+.seasonmenu img{
+  height: 100px;
+}
+.regularmenu img{
+  height: 100px;
+}
+.drinkmenu img{
+  height: 100px;
+}
+.specialmenu img{
+  height: 100px;
+}
+
+.menutable {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+.menutable img {
+  width: 250px;
+  display: block;
+}
+.menutable.leftalign {
+  justify-content: flex-start;
+}
+.menutable.leftalign img {
+  margin-left: 255px;
+}
+
+.picture{
+  position: relative; /* 親要素を基準に配置する */
+  display: inline-block; /* 画像サイズに合わせて親要素のサイズを調整 */
+}
+.picture img:last-child {
+  position: absolute; /* 親要素内で自由に配置 */
+  top: 40px; /* 上から40pxの位置 */
+  left: 40px; /* 左から100pxの位置 */
+  z-index: 10; /* 重ね順を一番上に */
+  width: 180px;
+}
+.picture img:last-child:hover {
+  transform: rotate(10deg);
+}
+
+
+/*ACCESS*/
+h6{
+  font-size: 50px;
+}
+.mappage {
+  display: flex;
+  gap: 40px; /* 地図と文字の間 */
+  align-items: flex-start;
+  margin-top: 120px;
+  padding-left: 40px;
+  justify-content: center;
+}
+
+/* 正方形にするための枠 */
+.googlemap {
+  width: 400px;        /* 正方形の幅（好みで変更OK） */
+  aspect-ratio: 1 / 1; /* 正方形に固定 */
+}
+
+/* iframe を枠いっぱいに広げる */
+#map {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 15px; /* 角丸（不要なら消してOK） */
+}
+
+/* 右側のテキスト */
+.where {
+  font-size: 18px;
+  line-height: 1.6;
+}
+p{
+  font-size: 30px;
+  margin-top: 30px;
+}
+.station{
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 120px;
+}
+
+/*goods PAGE*/
+/* カードを横に並べる */
+.cardContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  background: #fff;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+/* モーダル基本 */
+.modalArea {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1000;
+}
+
+.modalBg {
+  background: rgba(0,0,0,0.6);
+  width: 100%; height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.modalImage {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.closeModal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+/* カード配置（4列） */
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1000px; /* 横幅を決めると中央に整列する */
+  margin: 120px auto 80px; /* 上に少し余白をつける（ヘッダーのため） */
+}
+
+/* カードサイズ（ここだけ変えれば大きさ調整できる） */
+.card {
+  width: calc(25% - 30px); /* ←これで4列固定！ */
+  max-width: 220px;        /* 最大サイズ（お好みで調整） */
+  height: 260px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* 画像は比率維持で縮小 */
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+}
+.time {
+font-size: 30px;
+text-align: center;
+}

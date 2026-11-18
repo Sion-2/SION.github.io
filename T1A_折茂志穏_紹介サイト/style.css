@@ -1,0 +1,285 @@
+.flex{
+  display: flex;
+}
+.box{
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+.title{
+ background-color:black;
+ color: white;
+ display: flex;
+ justify-content: space-between;
+ font-size: 30px;
+}
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color:black;
+  z-index: 1000;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+}
+.navbar ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li{
+  margin: 0 20px;
+}
+.navbar a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 10px;
+}
+.navbar a:hover{
+  background-color: #555;
+}
+section{
+  padding: 100px 20px;
+  margin-top: 60px;
+  border-bottom: 1px solid#ccc;
+}
+
+/*topimage*/
+.topimage{
+  height: 600px;
+  background-image: url(images/2425.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 40px;
+}
+html,body{
+  height: 100%;
+  padding: 0;
+}
+body{
+  background-color: black;
+  background-image: url(2425.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/*main*/
+h2{
+  color: white;
+  font-size: 30px;
+  padding-top: 70px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-align: center;
+}
+
+
+
+
+
+h3{
+  margin-bottom: 20px;
+}
+.row{
+  display: flex;
+  justify-content: center;
+  gap:30px;
+  margin-top: 15px;
+}
+.row img{
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+}
+
+.team_img img{
+  transition: all 0.3s ease;
+}
+.team_img img:hover{
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.image-wrapper{
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,215,0,0.6);
+}
+h3{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 50px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.fav{
+justify-content: center;
+align-items: center;
+}
+
+.fav img{
+justify-content: center;
+align-items: center;
+margin-left: 20px;
+height: auto;
+width: 100%;
+max-width: 400px;
+}
+
+
+
+.works{
+  margin-left: 60px;
+  gap:10px;
+  transform: scale(0.8);
+  transform-origin:top left;
+}
+.work_img img{
+  transition: all 0.3s ease;
+}
+.work_img img:hover{
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+h5{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 50px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+h4{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+p{
+  color: white;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 25px;
+   padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+video{
+  margin-left: 30px;
+}
+.slide{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+h6{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 50px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.sns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sns img{
+  margin-top: 30px;
+  margin-left: 20px;
+  height: 100px;
+  width:auto;
+}
+.hover-darken{
+display: inline-block;
+transition: filter 0.3s ease;
+}
+.hover-darken:hover{
+  filter: brightness(70%);
+}
+
+.zaseki{
+  display: flex;
+}
+.zaseki img{
+  margin-top: 30px;
+  margin-left: 20px;
+  height: 500px;
+  width:auto;
+}
+h7{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 50px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.goods1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods1 img{
+ margin-top: 30px;
+  margin-left: 20px;
+  height: 500px;
+  width:auto;
+}
+
+.light{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.light img{
+  margin-left: 20px;
+  height: 630px;
+  width:auto;
+}
+
+.roww{
+  display: flex;
+  justify-content: center;
+  gap:30px;
+  margin-top: 50px;
+}
+.roww img{
+  width: 220px;
+  height: auto;
+  object-fit: cover;
+}
+
+.teams_img img{
+  transition: all 0.3s ease;
+}
+.teams_img img:hover{
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+.fot{
+  text-align: center;
+}

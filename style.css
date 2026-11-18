@@ -61,6 +61,49 @@ header {
   height: 500px;
 }
 
+.background {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.bg-track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  width: max-content;
+  height: 830px;
+  animation: flowRight 10s linear infinite;
+}
+
+.bg-img {
+  display: block;
+  width: auto;
+  height: 830px;
+  max-width: none;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+@keyframes flowRight {
+  from {
+    transform: translate(-50%, -50%);
+  }
+
+  to {
+    transform: translate(0, -50%);
+  }
+}
+
+
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 50px;
+}
 
 
 
@@ -180,7 +223,7 @@ header {
 }
 
 .screen-content{
-  width: 470px;
+  width: 400px;
   height: auto;
   padding-left: 25px;
   object-fit: cover;
@@ -190,24 +233,10 @@ header {
 
 /*WORKS*/
 h1 {
-  font-size: 70px;
+  font-size: 60px;
   padding-bottom: 10px;
   line-height: 1;
-}
-h2{
-  font-size: 35px;
-  line-height: 1;
-  text-decoration:underline;
-  text-decoration-color: rgb(0, 0, 0);
-  padding-top: 10px;
-  padding-bottom: 50px;
-  }
-h3{
-  font-size: 35px;
-  line-height: 1;
-  text-decoration:underline;
-  text-decoration-color: rgb(0, 0, 0);
-  padding-top: 10px;
+  margin-top: 20px;
 }
 
 .works {
@@ -235,17 +264,9 @@ h3{
 .left-column {
   padding-left: 40px;
 }
-.wcard {
-  width: 160px;
-  aspect-ratio: 2 / 3; /* ← 比率だけ指定。これで縦横キレイに保たれる！ */
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.7s ease;
-  cursor: pointer;
-  
-}
+
 .wcard {                   
-  width: 160px;
+  width: 180px;
   aspect-ratio: 2 / 3;
   position: relative;
   transform-style: preserve-3d;
@@ -287,9 +308,18 @@ h3{
   gap: 50px;             
 }
 
-.sns li img {
-  width: 100px;           
-  height: auto;
+.sns {
+  display: flex;
+  justify-content: center; /* 左右中央 */
+  align-items: center;     /* 上下中央 */
+  height: 280px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.sns img {
+  height: 280px;
+  width: auto;
 }
 
 .small{
@@ -306,7 +336,7 @@ h3{
 /*works.html*/
 /* ロゴ拡大アニメ */
 #logo {
-  width: 300px;
+  width: 200px;
   cursor: pointer;
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
@@ -340,6 +370,37 @@ h3{
   width: auto;   /* 好きな大きさ */
   height: 600px;
 }
+
+
+.workspagetop {
+height: 250px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+margin-top: 58px;
+}
+
+.workspagetop img {
+width: 200px;
+height: auto;
+}
+
+
+h2 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  line-height: 1;
+  text-align: center;
+}
+h3 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  line-height: 1;
+  text-align: center;
+  margin-top: 15px;
+}
+
 /*作品紹介カード*/
 .card {
   width: 200px;
@@ -352,8 +413,18 @@ h3{
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 30px; /* ← 行全体の位置 */
+  margin-top: 20px; /* ← 行全体の位置 */
 }
+
+
+.worksrowcard6 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px; /* ← 行全体の位置 */
+  margin-bottom: 50px; /* ← 行全体の位置 */
+}
+
 .rowcard {
   width: 220px;
   height: 300px;
@@ -385,7 +456,6 @@ h3{
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  margin-top: 110px;
 }
 .worksback {
   transform: rotateY(180deg);
@@ -433,6 +503,15 @@ h3{
   cursor: pointer;
   font-size: 22px;
   background: #ffffff;
+}
+
+.pink-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 /*---------------------------------------------------------------------------------------------*/
@@ -505,6 +584,8 @@ h3{
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-top: 20px; /* ← 行全体の位置 */
+  margin-bottom: 50px;
 }
 /* 表裏 */
 .lifefront,
@@ -528,7 +609,7 @@ h3{
 .lifep{
   font-size: 45px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .life-visual {
@@ -536,109 +617,626 @@ h3{
   width: 300px;
 }
 
-/* 動画（下） */
-.lifescreen {
+/*----------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* ==========================
+   iPhone・スマホ専用
+   ========================== */
+
+@media screen and (max-width: 767px) {
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ナビゲーション */
+  header {
+    width: 100%;
+  }
+
+  .topnav {
+  height: 50px;
+  padding: 0 15px;
+  justify-content: flex-end;
+}
+
+  .menubar {
+    display: flex;
+    justify-content: center;
+    gap: clamp(8px, 3vw, 15px);
+    padding: 0;
+    margin: 0;
+    font-size: clamp(14px, 4vw, 19px);
+    white-space: nowrap;
+  }
+
+  /* HOME背景 */
+  .background {
+    width: 100%;
+    min-height: 65svh;
+    overflow: hidden;
+  }
+
+  .toppage {
+    width: 100%;
+    height: 65svh;
+  }
+
+  .bg-track {
+    top: 50%;
+    height: 65svh;
+  }
+
+  .bg-img {
+    height: 65svh;
+  }
+
+  /* HOMEメイン画像 */
+  .logo-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    animation: none;
+  }
+
+  .logo-wrap img {
+    position: static;
+    display: block;
+    width: 95%;
+    max-width: 520px;
+    height: auto;
+    max-height: none;
+    transform: none;
+    object-fit: contain;
+  }
+
+  /* PROFILE・WORKSの配置 */
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  h1 {
+    width: 100%;
+    font-size: clamp(35px, 9vw, 45px);
+    text-align: center;
+    margin: 20px 0 15px;
+  }
+
+  /* PROFILEカード */
+  .card-container {
+    max-width: 100%;
+  }
+
+  .profcard {
+    width: min(78vw, 340px);
+    height: auto;
+    aspect-ratio: 440 / 590;
+    margin: 0 auto;
+  }
+
+  .profcard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* WORKS */
+  .works {
+    width: 100%;
+  }
+
+  .workscard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+  }
+
+  .workscard2 {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 0;
+  }
+
+  .wcard {
+    width: clamp(95px, 25vw, 145px);
+    height: auto;
+    aspect-ratio: 2 / 3;
+  }
+
+  .wcard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ゲーム機 */
+  .game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .gamemachine {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .gamebody {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+
+  /* 背景の動画 */
+.screen-content {
   position: absolute;
-  top: 119px;     /* 画面位置 */
-  left: 53%;
-  transform: translateX(-50%);
+
+  /* 動画の位置 */
+  top: 4%;
+  left: 9%;
+
+  /* 動画の大きさ */
+  width: 83%;
+  height: 31%;
+
+  object-fit: cover;
   z-index: 1;
+  padding: 0;
 }
 
-.lifescreen-content {
-  width: 140px;
-}
-
-/* 画像（上） */
-.profilemachine {
+/* 手前のゲーム機画像 */
+.gamebody {
   position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
   z-index: 2;
 }
 
-.profilemachine img {
-  width: 100%;
-  display: block;
+  /* Instagram */
+  .sns {
+    width: 100%;
+    height: auto;
+    margin: 35px 0;
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sns img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  /* FOOTER */
+  .small {
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 12px;
+  }
 }
 
 
-/*----------------------------------------------------------------------------------------------*/
+/* ==============================
+   PROFILE スマホ対応
+   ============================== */
 
-/*contact.html*/
-* {
-  box-sizing: border-box;
-}
-.contactbody {
-  color: #e0e0e0;
-  height: 100%;
-  overflow: hidden;
-}
-form {
-  max-width: 520px;
-  margin: 100px auto;
-  padding: 24px;
-  background: #ffffff;
-  border: 3px solid #c21cff;
-  box-shadow: 0 0 0 4px #ffffff, 0 0 20px rgba(0,229,255,0.4);
-}
-label {
-  color: #dd00ff;
-  font-size: 12px;
-}
-p {
+@media screen and (max-width: 767px) {
+
+  /* 全体 */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ヘッダー */
+  .topnav {
+    height: 50px;
+    padding: 0 15px;
+    justify-content: flex-end;
+  }
+
+  .menubar {
+    gap: 12px;
+    font-size: clamp(14px, 4vw, 18px);
+    padding: 0;
+    margin: 0;
+  }
+
+  /* PROFILE上部 */
+  .profpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 65px 15px 0;
+  }
+
+  /* PROFILEカード */
+  .spin-card {
+    width: min(78vw, 330px);
+    padding-top: 0;
+    margin: 0 auto;
+  }
+
+  .spin-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* プロフィール帳 */
+  .profpagememo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .profpagememo img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding-top: 0;
+  }
+
+  /* FAVORITE COORDINATE見出し */
+  .lifep {
+    width: 100%;
+    margin-top: 35px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: clamp(27px, 7vw, 36px);
+    line-height: 1.3;
+  }
+
+  .lifep p {
+    margin: 0;
+  }
+
+  /* お気に入りカード一覧 */
+  /* 見出し */
+.lifep {
+  font-size: 45px;
+  text-align: center;
+  margin-top: 30px;
   margin-bottom: 20px;
-  
 }
-input[type="text"],
-input[type="email"],
-select,
-textarea {
+
+/* カード全体 */
+.liferowcard {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto 50px;
+  justify-items: center;
+}
+
+/* カード本体 */
+.rowcard {
+  position: relative;
   width: 100%;
-  background: #ffffff;
-  color: #000000;
-  border: 2px solid #c904ff;
-  padding: 10px;
-  font-size: 12px;
-}
-input::placeholder,
-textarea::placeholder {
-  color: #d70cff;
-}
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  box-shadow: 0 0 8px #e100ff;
-  background: #dadada;
-}
-textarea {
-  min-height: 120px;
-}
-.game-btn {
-  font-family: "Bangers", system-ui;
-  width: 100%;
-  padding: 14px;
-  background: #e30cff;
-  color: #000;
-  font-size: 20px;
-  border: 3px solid #ffffff;
+  max-width: 200px;
+  aspect-ratio: 3 / 5;
+  perspective: 1000px;
   cursor: pointer;
 }
-.game-btn:hover {
+
+/* 表裏を動かす部分 */
+.inner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+/* クリックしたら裏返す */
+.rowcard.is-flipped .inner {
+  transform: rotateY(180deg);
+}
+
+/* 表と裏 */
+.lifefront,
+.lifeback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  -webkit-clip-path: inset(0 round 18px);
+  clip-path: inset(0 round 18px);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* 裏面 */
+.lifeback {
+  transform: rotateY(180deg);
+}
+
+/* 画像 */
+.lifefront img,
+.lifeback img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+/* スマホ */
+@media screen and (max-width: 600px) {
+
+  .lifep {
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  .liferowcard {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 16px;
+    width: 90%;
+    max-width: 360px;
+    margin: 20px auto 40px;
+  }
+
+  .rowcard {
+    width: 100%;
+    max-width: 165px;
+    aspect-ratio: 3 / 5;
+  }
+
+  /* 5枚目を中央に */
+  .rowcard:last-child {
+    grid-column: 1 / -1;
+    width: 165px;
+  }
+}
+
+
+.lifeback {
+  transform: rotateY(180deg);
+}
+
+.rowcard:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 165px;
+}
+
+  /* フッター */
+  .small {
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+}
+
+
+
+/* =========================
+   スマホ版 WORKS
+========================= */
+
+@media screen and (max-width: 600px) {
+
+  /* 画面から横にはみ出さないようにする */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* 上部の作品袋4つ */
+  .workspagetop {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    padding: 0 12px;
+    margin-top: 65px;
+    box-sizing: border-box;
+  }
+
+  .workspagetop a {
+    display: block;
+    width: 100%;
+  }
+
+  .workspagetop img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* WEB・GRAPHIC・MOVIE・OTHERの見出し */
+  h2,
+  h3 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  /* 作品カードの並び */
+  .worksrowcard,
+  .worksrowcard6 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    justify-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 390px;
+    padding: 0 12px;
+    margin: 15px auto 25px;
+    box-sizing: border-box;
+  }
+
+  /* カードの大きさ */
+  .worksrowcard .rowcard,
+  .worksrowcard6 .rowcard {
+    width: 100%;
+    max-width: 165px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* 5枚目は中央に配置 */
+  .worksrowcard .rowcard:nth-child(5),
+  .worksrowcard6 .rowcard:nth-child(5) {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 165px;
+  }
+
+  /* カードの中身 */
+  .worksrowcard .rowcard .inner,
+  .worksrowcard6 .rowcard .inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  /* カード画像 */
+  .worksfront,
+  .worksback {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .worksfront img,
+  .worksback img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  /* スマホではホバー回転を無効にする */
+  .worksrowcard .rowcard:hover .inner,
+  .worksrowcard6 .rowcard:hover .inner {
+    transform: none;
+  }
+
+  /* モーダル */
+  .modal-content {
+    width: 94%;
+    max-width: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .modal-images {
+    gap: 8px;
+  }
+
+  .modal-images img {
+    width: 48%;
+    max-width: none;
+    height: auto;
+  }
+
+  .close {
+    top: -28px;
+    right: 5px;
+  }
+
+}
+
+/* ロゴ画像 */
+#logo-overlay img {
+  display: block;
+  width: 80vw;
+  max-width: 420px;
+  max-height: 70vh;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* ロゴ表示画面 */
+#logo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   background: #ffffff;
-  color: #e642ff;
-  box-shadow: 0 0 12px #cc01ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease;
+  z-index: 9999;
 }
-.game-btn:active {
-  transform: translateY(2px);
+
+/* フェードアウト */
+#logo-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
 }
-select {
-  appearance: none;
-  background-image: linear-gradient(
-    45deg,
-    transparent 50%,
-    #d400ff 50%
-  );
-  background-position: right 10px center;
-  background-size: 8px 8px;
-  background-repeat: no-repeat;
+
+#logo-overlay.fade-out #logo {
+  transform: scale(1.2);
+  opacity: 0;
 }
